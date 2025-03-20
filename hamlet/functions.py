@@ -209,6 +209,9 @@ def add_nested_data(path: str, df: str = 'pandas', parse_dates: bool | list | No
 
     return data
 
+def get_one_plus_one():
+    return 1+1
+
 
 def get_all_subdirectories(path_directory):
     """Get names of all subdirectories."""
