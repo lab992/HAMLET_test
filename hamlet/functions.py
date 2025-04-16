@@ -230,6 +230,15 @@ def get_all_subdirectories(path_directory):
         return subdirectories  # Return the name of the first subdirectory
     else:
         return None  # No subdirectories found
+    
+def get_all_the_subdirectories(path_directory):
+    """Get names of all subdirectories."""
+    subdirectories = [name for name in os.listdir(path_directory) if os.path.isdir(os.path.join(path_directory,
+                                                                                                name))]
+    if len(subdirectories) > 0:
+        return subdirectories  # Return the name of the first subdirectory
+    else:
+        return None  # No subdirectories found
 
 
 def calculate_timedelta(target_df, reference_ts, by=c.TC_TIMESTAMP):
